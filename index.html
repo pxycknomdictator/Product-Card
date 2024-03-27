@@ -13,13 +13,13 @@
 <body>
 
     <main class="container">
-
         <header class="flex items-center">
             <nav class="flex items-center">
+                <span class="hamburger">&#9776;</span>
                 <a href="#">
-                    <img src="./images/logo.svg" alt="logo">
+                    <img id="logo" src="./images/logo.svg" alt="logo">
                 </a>
-                <ul class="flex">
+                <ul id="list" class="flex">
                     <a href="#">Collections</a>
                     <a href="#">Men</a>
                     <a href="#">Women</a>
@@ -28,8 +28,8 @@
                 </ul>
             </nav>
             <div class="profile flex items-center">
-                <img class="hover" src="./images/icon-cart.svg" alt="">
-                <img class="hover" src="./images/image-avatar.png" alt="">
+                <img class="hover" src="./images/icon-cart.svg" alt="cart">
+                <img id="avatar" class="hover" src="./images/image-avatar.png" alt="profile">
             </div>
         </header>
 
@@ -38,12 +38,12 @@
             <div class="product-image-container">
 
                 <div class="sequence">
-                    <img src="./images/image-product-1.jpg" alt="">
+                    <img class="images" src="./images/image-product-1.jpg" alt="">
                     <div class="mini-images-container grid">
-                        <img class="hover" src="./images/image-product-1-thumbnail.jpg" alt="">
-                        <img class="hover" src="./images/image-product-2-thumbnail.jpg" alt="">
-                        <img class="hover" src="./images/image-product-3-thumbnail.jpg" alt="">
-                        <img class="hover" src="./images/image-product-4-thumbnail.jpg" alt="">
+                        <img class="hover images" src="./images/image-product-1-thumbnail.jpg" alt="">
+                        <img class="hover images" src="./images/image-product-2-thumbnail.jpg" alt="">
+                        <img class="hover images" src="./images/image-product-3-thumbnail.jpg" alt="">
+                        <img class="hover images" src="./images/image-product-4-thumbnail.jpg" alt="">
                     </div>
                 </div>
 
@@ -52,7 +52,7 @@
             <div class="product-information-container">
                 <h3>Sneaker Company</h3>
                 <h1>Fall Limited Edition Sneakers</h1>
-                <p>These low-profile sneakers are your perfect casual wear companion. Featuring a 
+                <p>These low-profile sneakers are your perfect casual wear companion. Featuring a
                     durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
                 <p class="price flex items-center">$125.00 <span>50%</span></p>
                 <span class="strike">$250.00</span>
@@ -63,7 +63,7 @@
                         <img src="./images/plus.svg" class="plus color" alt="plus">
                     </div>
                     <button class="flex items-center gap">
-                        <img src="./images/icon-cart.svg" alt="">
+                        <img id="cart-icon" src="./images/icon-cart.svg" alt="">
                         Add to cart
                     </button>
                 </div>

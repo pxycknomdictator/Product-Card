@@ -44,6 +44,11 @@ a {
     display: inline-block;
 }
 
+.images {
+    max-width: 100%;
+    display: inline-block;
+}
+
 .gap {
     gap: 1.5rem;
 }
@@ -97,12 +102,18 @@ header {
     border-bottom: 1px solid hsl(0deg 0% 83.31%);
     height: 100px;
 
+    .hamburger {
+        font-size: 25px;
+        font-weight: 700;
+        display: none;
+    }
+
     nav {
         gap: 3rem;
 
         ul {
             gap: 3rem;
-            font-size: 1.3rem;
+            font-size: 12px;
         }
 
         a {
@@ -133,7 +144,7 @@ header {
 
 .hero-container {
     margin-top: 6rem;
-    width: 90%;
+    max-width: 1100px;
     margin-inline: auto;
 }
 
@@ -243,6 +254,246 @@ header {
                 filter: brightness(2.5);
                 width: 18px;
             }
+        }
+    }
+}
+
+
+/* media-queries */
+
+@media (max-width: 1255px) {
+    html {
+        font-size: 9px;
+    }
+}
+
+@media (max-width: 1167px) {
+    html {
+        font-size: 8px;
+    }
+}
+
+@media (max-width: 1094px) {
+    html {
+        font-size: 6px;
+    }
+
+    .product-information-container {
+        h3 {
+            font-size: 1.7rem;
+        }
+
+        h1 {
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 2rem;
+        }
+
+        .price {
+            font-size: 4rem;
+
+            span {
+                font-size: 1.8rem;
+            }
+        }
+
+        .strike {
+            font-size: 2rem;
+        }
+    }
+}
+
+@media (max-width: 950px) {
+    html {
+        font-size: 5px;
+    }
+
+    button {
+        font-size: 2.3rem;
+
+        #cart-icon {
+            width: 15px;
+        }
+    }
+}
+
+@media (max-width: 878px) {
+    html {
+        font-size: 4px;
+    }
+
+    .product-information-container {
+        h3 {
+            font-size: 2.5rem;
+        }
+
+        h1 {
+            margin-bottom: 5px;
+            font-size: 5rem;
+        }
+
+        p {
+            font-size: 3rem;
+        }
+
+        .price {
+            font-size: 4rem;
+
+            span {
+                font-size: 1.8rem;
+            }
+        }
+
+        .strike {
+            font-size: 1rem;
+        }
+    }
+}
+
+@media (max-width: 754px) {
+    html {
+        font-size: 4px;
+    }
+
+    header {
+        width: 100%;
+        border: none;
+    }
+
+    header nav #list {
+        display: none;
+    }
+
+    header .hamburger {
+        display: block;
+    }
+
+    header #logo {
+        margin-left: 10px;
+    }
+
+    #avatar {
+        margin-left: 10px;
+        width: 30px;
+    }
+
+    .hero-container {
+        margin-top: 10px;
+    }
+
+    .product-image-container {
+        width: 39%;
+    }
+}
+
+@media (max-width: 680px) {
+    .container {
+        width: 100%;
+        margin: 0;
+    }
+
+    header {
+        padding-inline: 26px;
+    }
+
+    .hero-container {
+        margin: auto;
+        flex-direction: column;
+    }
+
+    .product-image-container {
+        width: 100%;
+
+        .sequence>img {
+            border-radius: 0px;
+        }
+
+        .mini-images-container {
+            display: none;
+        }
+    }
+
+    .product-information-container {
+        width: 100%;
+
+        h3 {
+            font-size: 3rem;
+        }
+
+        h1 {
+            font-size: 13rem;
+            line-height: 60px;
+        }
+
+        p {
+            font-size: 4rem;
+        }
+
+        .price {
+            font-size: 8rem;
+
+            span {
+                font-size: 4rem;
+            }
+        }
+
+        .strike {
+            font-size: 4rem;
+        }
+
+        .product-quantity-container {
+            flex-direction: column;
+
+            .quantity-box {
+                width: 100%;
+                padding-block: 5rem;
+                margin-bottom: 10px;
+            }
+
+            button {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding-block: 5rem;
+                font-size: 4rem;
+
+                #cart-icon{
+                    width: 20px;
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 470px){
+    html{
+        font-size: 3.4px;
+    }
+    .product-information-container{
+        h3{
+            font-size: 4rem;
+        }
+        h1{
+            font-size: 8rem;
+        }
+    }
+}
+@media (max-width: 418px){
+    html{
+        font-size: 3.2px;
+    }
+    .product-information-container{
+        h3{
+            font-size: 4rem;
+        }
+        h1{
+            font-size: 8rem;
+            line-height: 30px;
         }
     }
 }
