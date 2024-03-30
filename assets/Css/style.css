@@ -145,6 +145,54 @@ header {
                 width: 20px;
             }
         }
+
+        .drop-down {
+            position: absolute;
+            width: 380px;
+            background: white;
+            border-radius: 6px;
+            box-shadow: 0px 10px 20px 1px #bab4b48c;
+            right: 0;
+            top: 75px;
+            grid-template-columns: 1fr;
+            display: none;
+
+            .card-text {
+                font-size: 20px;
+                padding: 20px 25px;
+                font-weight: 700;
+                border-bottom: 1px solid hsl(0deg 0% 92.91%);
+            }
+
+            .drop-down-description {
+                padding: 20px 25px 30px 25px;
+            }
+
+            .drop-down-text {
+                font-size: 16px;
+                line-height: 24px;
+            }
+
+            .drop-down-image {
+                width: 50px;
+                border-radius: 4px;
+            }
+
+            .cart-information {
+                gap: 2rem;
+                margin-bottom: 20px;
+            }
+
+            .drop-down-btn {
+                width: 100%;
+                padding-block: 13px;
+                border-radius: 6px;
+                border: none;
+                font-weight: 600;
+                background: var(--Orange);
+                color: white;
+            }
+        }
     }
 }
 
@@ -222,7 +270,7 @@ header {
         .quantity-box {
             width: 180px;
             padding-block: 1.8rem;
-            border-radius: 10px;
+            border-radius: 6px;
             grid-template-columns: repeat(3, 1fr);
             background: var(--Light-grayish-blue);
             place-items: center;
@@ -230,21 +278,20 @@ header {
 
         .plus,
         .minus {
-            font-size: 20px;
             font-weight: 600;
             cursor: pointer;
-            width: 20px;
+            width: 2rem;
         }
 
         .quantity {
-            font-size: 18px;
+            font-size: 2rem;
             font-weight: 600;
         }
 
         button {
             padding-block: 1.8rem;
             padding-inline: 9rem;
-            border-radius: 9px;
+            border-radius: 6px;
             border: none;
             font-weight: 600;
             background: var(--Orange);
@@ -281,7 +328,7 @@ header {
 
 @media (max-width: 1094px) {
     html {
-        font-size: 6px;
+        font-size: 7px;
     }
 
     .product-information-container {
@@ -313,7 +360,7 @@ header {
 
 @media (max-width: 950px) {
     html {
-        font-size: 5px;
+        font-size: 6px;
     }
 
     button {
@@ -327,7 +374,35 @@ header {
 
 @media (max-width: 878px) {
     html {
-        font-size: 4px;
+        font-size: 5px;
+    }
+
+    #quantity-boxx {
+        width: 100%;
+
+        .quantity {
+            font-size: 3rem;
+        }
+
+        img {
+            width: 3rem;
+        }
+    }
+
+    .product-quantity-container {
+        flex-direction: column;
+    }
+
+
+    .product-quantity-container {
+        gap: 2rem;
+
+        button {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
     }
 
     .product-information-container {
@@ -353,7 +428,7 @@ header {
         }
 
         .strike {
-            font-size: 1rem;
+            font-size: 3rem;
         }
     }
 }
@@ -429,13 +504,28 @@ header {
         margin: 0;
     }
 
+    .profile {
+        #drop-menu {
+            width: 98%;
+            margin: auto;
+            top: 109px;
+        }
+    }
+
+
     header {
         padding-inline: 26px;
     }
+
     header nav #list {
         top: 0;
         height: 100vh;
         border-radius: 0;
+    }
+
+    #drop-menu {
+        width: 100vh;
+        left: 0;
     }
 
     .hero-container {
@@ -486,10 +576,17 @@ header {
         .product-quantity-container {
             flex-direction: column;
 
-            .quantity-box {
-                width: 100%;
+            #quantity-boxx {
                 padding-block: 5rem;
                 margin-bottom: 10px;
+
+                img {
+                    width: 6rem;
+                }
+            }
+
+            #number {
+                font-size: 6rem;
             }
 
             button {
