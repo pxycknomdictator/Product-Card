@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./assets/Css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Kumbh+Sans:100,200,300,regular,500,600,700,800,900"
         rel="stylesheet" />
-        <link rel="shortcut icon" href="./images/favicon-32x32.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./images/favicon-32x32.png" type="image/x-icon">
     <title>Frontend Mentor | E-commerce product page</title>
 </head>
 
@@ -31,35 +31,50 @@
             </nav>
 
             <div class="profile flex items-center">
-                <img class="hover" src="./images/icon-cart.svg" alt="cart">
+                <img id="cart" class="hover" src="./images/icon-cart.svg" alt="cart">
                 <img id="avatar" class="hover" src="./images/image-avatar.png" alt="profile">
 
                 <div id="drop-menu" class="drop-down grid">
-                    <p class="card-text">Cart</p>
+                    <p class="card-text">Cart <span id="cart-cross" class="hover">&#10539;</span></p>
                     <div class="drop-down-description">
-                        <div class="flex items-center cart-information">
-                            <img class="drop-down-image" src="./images/image-product-1.jpg" alt="product-image">
-                            <p class="drop-down-text">Fall Limited  Edition Sneaker <span>$125.00 x <b class="amount">$375.00</b></span></p>
-                            <img src="./images/icon-delete.svg" alt="delete-icon">
+                        <span class="empty flex justify-center">Your cart is empty</span>
+                        <div class="flex cart-information hidden">
+                            <div id="arrange" class="flex items-center">
+                                <img class="drop-down-image" src="./images/image-product-1.jpg" alt="product-image">
+                                <p class="drop-down-text">Fall Limited Edition Sneaker <span>$125.00 x <b
+                                            class="amount">0</b></span></p>
+                                <img class="deletesvg" src="./images/icon-delete.svg" alt="delete-icon">
+                            </div>
+                            <div>
+                                <button id="Checkout" class="drop-down-btn hover">Checkout</button>
+                            </div>
                         </div>
-                        <button class="drop-down-btn hover">Checkout</button>
                     </div>
                 </div>
 
             </div>
         </header>
 
-        <section class="hero-container flex items-center">
+        <section class="hero-container relative flex items-center overflow">
 
             <div class="product-image-container">
 
                 <div class="sequence">
-                    <img class="images" src="./images/image-product-1.jpg" alt="">
+                    <div class="slider flex relative overflow">
+                        <img class="slides" src="./images/image-product-1.jpg" alt="">
+                        <img class="slides" src="./images/image-product-2.jpg" alt="">
+                        <img class="slides" src="./images/image-product-3.jpg" alt="">
+                        <img class="slides" src="./images/image-product-4.jpg" alt="">
+                        <div class="navigate flex items-center">
+                            <img class="hover previous" src="./images/icon-previous.svg" alt="previous">
+                            <img class="hover next" src="./images/icon-next.svg" alt="next">
+                        </div>
+                    </div>
                     <div class="mini-images-container grid">
-                        <img class="hover images" src="./images/image-product-1-thumbnail.jpg" alt="">
-                        <img class="hover images" src="./images/image-product-2-thumbnail.jpg" alt="">
-                        <img class="hover images" src="./images/image-product-3-thumbnail.jpg" alt="">
-                        <img class="hover images" src="./images/image-product-4-thumbnail.jpg" alt="">
+                        <img class="hover images" src="./images/image-product-1.jpg" alt="">
+                        <img class="hover images" src="./images/image-product-2.jpg" alt="">
+                        <img class="hover images" src="./images/image-product-3.jpg" alt="">
+                        <img class="hover images" src="./images/image-product-4.jpg" alt="">
                     </div>
                 </div>
 

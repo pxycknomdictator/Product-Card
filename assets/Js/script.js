@@ -39,3 +39,44 @@ increamentContainer.addEventListener("click", (event) => {
 })
 
 
+// Slider script
+
+const slidesContainer = document.querySelector(".mini-images-container");
+const slideImages = document.querySelector(".slides")
+
+slidesContainer.addEventListener("click", (event) => {
+    if (event.target.tagName === "IMG") {
+        slideImages.src = event.target.src;
+    }
+    return false
+})
+
+// Add to Cart script
+
+const profile = document.querySelector(".profile");
+const dropdown = document.querySelector(".drop-down");
+const crossCart = document.querySelector("#cart-cross");
+
+profile.addEventListener("click", (event) => {
+    if (event.target.id === "avatar" || event.target.id === "cart") {
+        dropdown.style.display = "block"
+    }
+    return false
+})
+
+crossCart.addEventListener("click", () => {
+    dropdown.style.display = "none"
+})
+
+const amount = document.querySelector(".amount");
+const AddtoCartbtn = document.querySelector("#btn");
+const cardDescription = document.querySelector(".cart-information");
+AddtoCartbtn.addEventListener("click", () => {
+    dropdown.style.display = "block"
+    const empty = document.querySelector(".empty");
+    empty.style.display = "none";
+    cardDescription.style.display = "block"
+    amount.textContent = checkquantity(counter)
+})
+
+
