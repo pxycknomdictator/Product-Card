@@ -258,6 +258,11 @@ header {
         img {
             width: 100%;
             border-radius: 7px;
+            transition: filter .2s ease-in-out;
+
+            &:hover{
+                filter: opacity(0.6);
+            }
         }
     }
 }
