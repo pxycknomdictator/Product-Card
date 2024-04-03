@@ -164,6 +164,20 @@ header {
             }
         }
 
+        #points {
+            background: var(--Orange);
+            color: white;
+            width: 20px;
+            height: 20px;
+            padding: 3px 6px;
+            font-size: 12px;
+            font-weight: 600;
+            border-radius: 50%;
+            top: 0;
+            left: 10px;
+            opacity: 0;
+        }
+
         .drop-down {
             position: absolute;
             width: 380px;
@@ -182,7 +196,7 @@ header {
                 font-weight: 700;
                 border-bottom: 1px solid hsl(0deg 0% 92.91%);
 
-                span{
+                span {
                     float: right;
                 }
             }
@@ -260,7 +274,7 @@ header {
             border-radius: 7px;
             transition: filter .2s ease-in-out;
 
-            &:hover{
+            &:hover {
                 filter: opacity(0.6);
             }
         }
@@ -507,6 +521,7 @@ header {
 
     header nav #list {
         transition: all .3s ease-in-out;
+        z-index: 999px;
         position: absolute;
         display: flex;
         flex-direction: column;
@@ -593,8 +608,8 @@ header {
     }
 
     #drop-menu {
-        width: 100vh;
-        left: 0;
+        top: 73px !important;
+        width: 70vw !important;
         box-shadow: none;
     }
 

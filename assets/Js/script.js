@@ -11,33 +11,6 @@ crossMenuButton.addEventListener("click", () => {
     document.querySelector("#list").style.left = "-400px"
 })
 
-// increament and decreament script
-
-const increamentContainer = document.querySelector("#quantity-boxx");
-let number = document.querySelector("#number");
-let counter = 0;
-
-const checkquantity = (value) => {
-    return (value >= 0) ? value++ : 0;
-}
-
-increamentContainer.addEventListener("click", (event) => {
-    event.preventDefault()
-
-    try {
-        if (event.target.className === "plus") {
-            counter += 1
-        } else if (event.target.className === "minus") {
-            counter -= 1
-        } else {
-            return false
-        }
-        number.innerText = (checkquantity(counter));
-    } catch (error) {
-        console.log(error);
-    }
-})
-
 
 // Slider script
 
@@ -51,32 +24,78 @@ slidesContainer.addEventListener("click", (event) => {
     return false
 })
 
-// Add to Cart script
+// close cart script
 
-const profile = document.querySelector(".profile");
-const dropdown = document.querySelector(".drop-down");
 const crossCart = document.querySelector("#cart-cross");
-
-profile.addEventListener("click", (event) => {
-    if (event.target.id === "avatar" || event.target.id === "cart") {
-        dropdown.style.display = "block"
-    }
-    return false
-})
-
 crossCart.addEventListener("click", () => {
     dropdown.style.display = "none"
 })
 
-const amount = document.querySelector(".amount");
-const AddtoCartbtn = document.querySelector("#btn");
-const cardDescription = document.querySelector(".cart-information");
-AddtoCartbtn.addEventListener("click", () => {
-    dropdown.style.display = "block"
-    const empty = document.querySelector(".empty");
-    empty.style.display = "none";
-    cardDescription.style.display = "block"
-    amount.textContent = checkquantity(counter)
+// increament and decreament script
+
+let counter = 0;
+const increamentContainer = document.querySelector("#quantity-boxx");
+const cartdesription = document.querySelector(".cart-information")
+const amount = document.querySelector(".amount")
+let number = document.querySelector("#number");
+let points = document.querySelector("#points");
+const addToCartBtn = document.querySelector("#btn");
+const removeitems = document.querySelector(".deletesvg")
+
+removeitems.addEventListener("click", () => {
+    removedescript()
+})
+addToCartBtn.addEventListener("click", () => {
+    showitems()
 })
 
 
+const checkquantity = (value) => {
+    return (value <= 0) ? 0 : value++;
+}
+
+const showitems = () => {
+    cartdesription.style.display = "block"
+    empty.style.display = "none"
+}
+
+const showcart = () => {
+    dropdown.style.display = "block"
+}
+
+
+increamentContainer.addEventListener("click", (event) => {
+    event.preventDefault()
+
+    if (event.target.className === "plus") {
+        points.style.opacity = "1"
+        counter += 1
+    } else if (event.target.className === "minus") {
+        counter -= 1
+    } else {
+        return false
+    }
+    number.textContent = checkquantity(counter);
+    points.textContent = checkquantity(counter)
+    amount.innerHTML = checkquantity(counter)
+
+})
+
+
+// Add to Cart script
+
+const profile = document.querySelector("#cart");
+const dropdown = document.querySelector("#drop-menu");
+const empty = document.querySelector(".empty")
+
+profile.addEventListener("click", () => {
+    showcart()
+})
+
+const removedescript = () => {
+    empty.style.display = "block";
+    cartdesription.style.display = "none"
+    points.style.opacity = "0"
+    number.textContent = "0"
+}
+removedescript()
