@@ -51,7 +51,14 @@ addToCartBtn.addEventListener("click", () => {
 
 
 const checkquantity = (value) => {
-    return (value <= 0) ? 0 : value++;
+    if (value > 0) {
+        return value++
+    } else if (value < 0 || value === 0) {
+        value = 0;
+        counter = 0;
+        number.textContent = "0";
+        points.textContent = "0"
+    }
 }
 
 const showitems = () => {
