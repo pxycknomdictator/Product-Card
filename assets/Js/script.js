@@ -75,6 +75,10 @@ const showcart = () => {
 }
 
 
+const clear = () => {
+
+}
+
 increamentContainer.addEventListener("click", (event) => {
     event.preventDefault()
 
@@ -92,8 +96,8 @@ increamentContainer.addEventListener("click", (event) => {
     const totalAmount = () => {
         let quantity = checkquantity(counter);
         let proprice = price.innerHTML;
-        if (quantity <=  0) {
-            quantity.innerHTML = "0"
+        if (quantity === undefined) {
+            total.innerHTML = ""
         } else {
             total.innerHTML = (`$${(proprice * quantity).toFixed(2)}`);
         }
