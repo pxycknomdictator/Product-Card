@@ -41,11 +41,15 @@ let number = document.querySelector("#number");
 let points = document.querySelector("#points");
 const addToCartBtn = document.querySelector("#btn");
 const removeitems = document.querySelector(".deletesvg")
+const total = document.querySelector("#total");
+const price = document.querySelector("#price");
+
 
 removeitems.addEventListener("click", () => {
     removedescript()
 })
 addToCartBtn.addEventListener("click", () => {
+    points.style.opacity = "1"
     showitems()
 })
 
@@ -53,10 +57,11 @@ addToCartBtn.addEventListener("click", () => {
 const checkquantity = (value) => {
     if (value > 0) {
         return value++
-    } else if (value < 0 || value === 0) {
+    } else if (value <= 0) {
         counter = 0;
         number.textContent = "0";
-        points.textContent = "0"
+        points.textContent = "0";
+        amount.textContent = "0";
     }
 }
 
@@ -74,7 +79,6 @@ increamentContainer.addEventListener("click", (event) => {
     event.preventDefault()
 
     if (event.target.className === "plus") {
-        points.style.opacity = "1"
         counter += 1
     } else if (event.target.className === "minus") {
         counter -= 1
@@ -83,8 +87,19 @@ increamentContainer.addEventListener("click", (event) => {
     }
     number.textContent = checkquantity(counter);
     points.textContent = checkquantity(counter)
-    amount.innerHTML = checkquantity(counter)
+    amount.innerHTML = checkquantity(counter);
 
+    const totalAmount = () => {
+        let quantity = checkquantity(counter);
+        let proprice = price.innerHTML;
+        if (quantity <=  0) {
+            quantity.innerHTML = "0"
+        } else {
+            total.innerHTML = (`$${(proprice * quantity).toFixed(2)}`);
+        }
+    }
+
+    totalAmount()
 })
 
 

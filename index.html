@@ -42,8 +42,10 @@
                         <div class="flex cart-information">
                             <div id="arrange" class="flex items-center">
                                 <img class="drop-down-image" src="./images/image-product-1.jpg" alt="product-image">
-                                <p class="drop-down-text">Fall Limited Edition Sneaker <span>$125.00 x <b
-                                            class="amount">0</b></span></p>
+                                <div>
+                                    <p class="drop-down-text">Fall Limited Edition Sneaker</p>
+                                    <span id="price" class="size">125.00</span> <span class="size">x</span> <span class="amount bold size">0</span> <span class="bold size ml" id="total">0</span>
+                                </div>
                                 <img class="deletesvg hover" src="./images/icon-delete.svg" alt="delete-icon">
                             </div>
                             <div>
@@ -86,8 +88,11 @@
                 <h1>Fall Limited Edition Sneakers</h1>
                 <p>These low-profile sneakers are your perfect casual wear companion. Featuring a
                     durable rubber outer sole, they'll withstand everything the weather can offer.</p>
-                <p class="price flex items-center">$125.00 <span>50%</span></p>
-                <span class="strike">$250.00</span>
+                <div id="price-container" class="flex items-center">
+                    <p class="price">125.00</p>
+                    <span id="discout">50%</span>
+                </div>
+                <span id="price" class="strike">$250.00</span>
                 <div class="product-quantity-container flex items-center">
                     <div id="quantity-boxx" class="quantity-box grid">
                         <img src="./images/minus.svg" class="minus" alt="minus">
